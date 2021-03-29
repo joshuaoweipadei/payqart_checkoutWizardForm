@@ -1,0 +1,21 @@
+{
+  "name": "payqart",
+  "version": "1.0.0",
+  "description": "e-commerce app",
+  "main": "server.js",
+  "scripts": {
+    "test": "node ./server.js",
+    "server": "nodemon ./server.js",
+    "clientinstall": "cd client && npm install",
+    "client": "cd client && npm start",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run clientinstall && cd client && npm run build",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Joshua Oweipadei Bayefa",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

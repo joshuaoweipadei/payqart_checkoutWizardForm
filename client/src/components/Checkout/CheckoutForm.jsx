@@ -45,11 +45,12 @@ const CheckoutForm = () => {
   const [ errMessage, setErrMessage ] = useState('')
 
   const onSubmit = (values) => {
-    let shoppingCredit = cartValue(products) - payment
+    let shoppingCredit = cartValue(products) - payment;
     // this is stopping the activeStep from increasing
     if(activeStep < 2) {
       setActiveStep(activeStep + 1);
     }
+
     actions.updateAction({
       ...state.data,
       ...values,
@@ -66,15 +67,20 @@ const CheckoutForm = () => {
         reset();  // Reset all form fields
         setActiveStep(0);  // Set active to 0
         actions.clearAction();  // Clear state data of user
-      })
+      });
     }
+
+    // Scrolls the page to the top
+    window.scrollTo(0, 0);
   }
 
   const previousStep = (e) => {
     e.preventDefault();
     setActiveStep(activeStep - 1);
     clearErrors();
-    // actions.clearAction();
+
+    // Scrolls the page to the top
+    window.scrollTo(0, 0);
   }
 
   const handleUpdateDownPayment = () => {

@@ -12,7 +12,6 @@ import { products } from '../Product/data'
 import { cartValue } from '../../helpers'
 
 const Checkout = () => {
-
   // create your store
   createStore({
     data: {}

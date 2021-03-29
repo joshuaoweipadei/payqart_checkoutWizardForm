@@ -1,4 +1,4 @@
-const baseUrl = `http://localhost:7000/api`;
+const baseUrl = `./api`;
 
 export const services = {
   order,

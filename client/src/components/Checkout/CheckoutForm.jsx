@@ -107,6 +107,7 @@ const CheckoutForm = () => {
       <>
         <h4>RESULTS: ready to be sent to the database</h4>
         <pre>{JSON.stringify(state, null, 2)}</pre>
+        <div style={{paddingBottom: "200px"}}></div>
       </>
       }
 

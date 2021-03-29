@@ -111,7 +111,7 @@ const CheckoutForm = () => {
       </div>
       {activeStep === 2 &&
       <>
-        <h4>RESULTS: ready to be sent to the database</h4>
+        <h4>RESULTS: ready to be send to the database</h4>
         <pre>{JSON.stringify(state, null, 2)}</pre>
         <div style={{paddingBottom: "200px"}}></div>
       </>

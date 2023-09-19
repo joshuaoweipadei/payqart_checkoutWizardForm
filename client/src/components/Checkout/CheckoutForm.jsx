@@ -16,7 +16,7 @@ import clearAction from "./clearAction"
 
 import { products } from '../Product/data'
 import { cartValue, downPayment, interestPayable, monthlyInstallment } from '../../helpers'
-import { services } from '../../services';
+// import { services } from '../../services';
 
 const steps = [
   { label: "" },
@@ -62,9 +62,8 @@ const CheckoutForm = () => {
 
     // Send to backend API when active step is equal to 2
     if(activeStep === 2) {
+      window.alert("Data sent to the backend successfully!");
       setTimeout(() => {
-        window.alert(JSON.stringify(state.data, 2, null));
-        window.alert("Data sent to the backend successfully!");
         reset();  // Reset all form fields
         setActiveStep(0);  // Set active to 0
         actions.clearAction();  // Clear state data of user

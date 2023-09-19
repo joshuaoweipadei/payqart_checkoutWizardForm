@@ -62,12 +62,13 @@ const CheckoutForm = () => {
 
     // Send to backend API when active step is equal to 2
     if(activeStep === 2) {
-      services.order(state.data).then((res) => {
-        window.alert(res.message);
+      setTimeout(() => {
+        window.alert(JSON.stringify(state.data, 2, null));
+        window.alert("Data sent to the backend successfully!");
         reset();  // Reset all form fields
         setActiveStep(0);  // Set active to 0
         actions.clearAction();  // Clear state data of user
-      });
+      }, 1000);
     }
 
     // Scrolls the page to the top
